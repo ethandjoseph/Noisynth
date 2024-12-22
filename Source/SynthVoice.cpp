@@ -8,6 +8,7 @@ bool SynthVoice::canPlaySound(juce::SynthesiserSound* sound)
 void SynthVoice::startNote(int midiNoteNumber, float velocity, juce::SynthesiserSound* sound, int currentPitchWheelPosition)
 {
 	overtonePassFilter.setFrequency(juce::MidiMessage::getMidiNoteInHertz(midiNoteNumber));
+	osc.setFrequency(juce::MidiMessage::getMidiNoteInHertz(midiNoteNumber));
     adsr.noteOn();
     currentMidiNoteNumber = midiNoteNumber;
 }
@@ -40,6 +41,7 @@ void SynthVoice::prepareToPlay(double sampleRate, int samplesPerBlock, int outpu
     spec.sampleRate = sampleRate;
     spec.numChannels = outputChannels;
 
+	osc.prepare(spec);
     overtonePassFilter.prepare(spec);
     gain.prepare(spec);
 
@@ -77,8 +79,10 @@ void SynthVoice::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int sta
 
 	overtonePassFilter.process(synthBuffer);
 
-	juce::dsp::AudioBlock<float> audioBlock(synthBuffer);
-    gain.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+	juce::dsp::AudioBlock<float> block(synthBuffer);
+	osc.process(juce::dsp::ProcessContextReplacing<float>(block));
+
+    gain.process(juce::dsp::ProcessContextReplacing<float>(block));
 
     adsr.applyEnvelopeToBuffer(synthBuffer, 0, synthBuffer.getNumSamples());
 

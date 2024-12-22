@@ -21,7 +21,7 @@ private:
 	juce::AudioBuffer<float> synthBuffer;
 	juce::ADSR adsr;
 	juce::ADSR::Parameters adsrParameters;
-	//juce::dsp::Oscillator<float> osc{ [](float x) { return std::sin(x); } };
+	juce::dsp::Oscillator<float> osc{ [](float x) { return std::sin(x); } };
 	juce::dsp::Gain<float> gain;
 	int currentMidiNoteNumber{ -1 };
 	bool isPrepared{ false };
