@@ -1,5 +1,5 @@
 # Noisynth
- A unique monophonic (for now) whitenoise synth based on my overtonePass Filter.<br>
+ A unique monophonic (for now) white noise synth based on my overtonePass Filter.<br>
  Each note consists of whitenoise but a bandpass fitler applied at that note's frequency plus bandpasses on 3 additional overtones (upto 20k Hz).
 
 ![Noisynth screenshot](https://github.com/ethandjoseph/Noisynth/blob/main/Noisynth%20plugin%20screenshot.png)
