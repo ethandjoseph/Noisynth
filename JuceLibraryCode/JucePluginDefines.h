@@ -17,13 +17,13 @@
  #define JucePlugin_Build_VST3             1
 #endif
 #ifndef  JucePlugin_Build_AU
- #define JucePlugin_Build_AU               0
+ #define JucePlugin_Build_AU               1
 #endif
 #ifndef  JucePlugin_Build_AUv3
- #define JucePlugin_Build_AUv3             0
+ #define JucePlugin_Build_AUv3             1
 #endif
 #ifndef  JucePlugin_Build_AAX
- #define JucePlugin_Build_AAX              0
+ #define JucePlugin_Build_AAX              1
 #endif
 #ifndef  JucePlugin_Build_Standalone
  #define JucePlugin_Build_Standalone       1
@@ -32,7 +32,7 @@
  #define JucePlugin_Build_Unity            0
 #endif
 #ifndef  JucePlugin_Build_LV2
- #define JucePlugin_Build_LV2              0
+ #define JucePlugin_Build_LV2              1
 #endif
 #ifndef  JucePlugin_Enable_IAA
  #define JucePlugin_Enable_IAA             0
@@ -47,10 +47,10 @@
  #define JucePlugin_Desc                   "Noisynth"
 #endif
 #ifndef  JucePlugin_Manufacturer
- #define JucePlugin_Manufacturer           "yourcompany"
+ #define JucePlugin_Manufacturer           "Earth Mover DSP"
 #endif
 #ifndef  JucePlugin_ManufacturerWebsite
- #define JucePlugin_ManufacturerWebsite    "www.yourcompany.com"
+ #define JucePlugin_ManufacturerWebsite    "www.EarthMoverDSP.com"
 #endif
 #ifndef  JucePlugin_ManufacturerEmail
  #define JucePlugin_ManufacturerEmail      ""
@@ -110,10 +110,10 @@
  #define JucePlugin_AUManufacturerCode     JucePlugin_ManufacturerCode
 #endif
 #ifndef  JucePlugin_CFBundleIdentifier
- #define JucePlugin_CFBundleIdentifier     com.yourcompany.Noisynth
+ #define JucePlugin_CFBundleIdentifier     com.EarthMoverDSP.Noisynth
 #endif
 #ifndef  JucePlugin_AAXIdentifier
- #define JucePlugin_AAXIdentifier          com.yourcompany.Noisynth
+ #define JucePlugin_AAXIdentifier          com.EarthMoverDSP.Noisynth
 #endif
 #ifndef  JucePlugin_AAXManufacturerCode
  #define JucePlugin_AAXManufacturerCode    JucePlugin_ManufacturerCode
@@ -137,7 +137,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "yourcompany: Noisynth"
+ #define JucePlugin_IAAName                "Earth Mover DSP: Noisynth"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16
@@ -152,10 +152,10 @@
  #define JucePlugin_ARATransformationFlags  0
 #endif
 #ifndef  JucePlugin_ARAFactoryID
- #define JucePlugin_ARAFactoryID           "com.yourcompany.Noisynth.factory"
+ #define JucePlugin_ARAFactoryID           "com.EarthMoverDSP.Noisynth.factory"
 #endif
 #ifndef  JucePlugin_ARADocumentArchiveID
- #define JucePlugin_ARADocumentArchiveID   "com.yourcompany.Noisynth.aradocumentarchive.1.0.0"
+ #define JucePlugin_ARADocumentArchiveID   "com.EarthMoverDSP.Noisynth.aradocumentarchive.1.0.0"
 #endif
 #ifndef  JucePlugin_ARACompatibleArchiveIDs
  #define JucePlugin_ARACompatibleArchiveIDs  ""

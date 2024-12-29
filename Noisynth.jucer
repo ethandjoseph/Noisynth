@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="nR6zqd" name="Noisynth" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildStandalone,buildVST3"
-              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn">
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildAAX,buildAU,buildAUv3,buildLV2,buildStandalone,buildVST3"
+              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
+              companyName="Earth Mover DSP" lv2Uri="http://earthmoverdsp.com/plugins/Noisynth">
   <MAINGROUP id="kX9pQ6" name="Noisynth">
     <GROUP id="{8E53FC14-3BBB-29C2-823F-B2BBA55D75F6}" name="Source">
       <FILE id="miwPlp" name="OvertonePassFilter.cpp" compile="1" resource="0"
