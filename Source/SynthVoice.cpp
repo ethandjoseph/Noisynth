@@ -74,15 +74,19 @@ void SynthVoice::renderNextBlock(juce::AudioBuffer<float>& outputBuffer, int sta
         for (int s = 0; s < synthBuffer.getNumSamples(); ++s)
         {
             buffer[s] = random.nextFloat() * 0.25f - 0.125f;
+            buffer[s] *= noiseGain;
         }
     }
 
 	overtonePassFilter.process(synthBuffer);
+    
+	// Sine wave =================================================================================================
+    
+    juce::dsp::AudioBlock<float> sinBlock(sinBuffer);
 
-	juce::dsp::AudioBlock<float> block(synthBuffer);
-	osc.process(juce::dsp::ProcessContextReplacing<float>(block));
+	osc.process(juce::dsp::ProcessContextReplacing<float>(sinBlock));
 
-    gain.process(juce::dsp::ProcessContextReplacing<float>(block));
+    gain.process(juce::dsp::ProcessContextReplacing<float>(outputBlock));
 
     adsr.applyEnvelopeToBuffer(synthBuffer, 0, synthBuffer.getNumSamples());
 

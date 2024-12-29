@@ -118,9 +118,9 @@ void OvertonePassFilter::process(juce::AudioBuffer<float>& buffer)
 	bandPassFilter4.process(context4);
 
 	float filterGain1 = juce::Decibels::decibelsToGain(0.);
-	float filterGain2 = juce::Decibels::decibelsToGain(-2.);
-	float filterGain3 = juce::Decibels::decibelsToGain(-4.);
-	float filterGain4 = juce::Decibels::decibelsToGain(-6.);
+	float filterGain2 = juce::Decibels::decibelsToGain(-4.);
+	float filterGain3 = juce::Decibels::decibelsToGain(-8.);
+	float filterGain4 = juce::Decibels::decibelsToGain(-16.);
 
 	for (int channel = 0; channel < buffer.getNumChannels(); ++channel)
 	{
